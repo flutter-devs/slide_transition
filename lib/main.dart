@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'core/viewmodels/views/login/home_viewmodel.dart';
 
 
-void main() async {
+Future<void> main()  async {
   WidgetsFlutterBinding.ensureInitialized();
   Provider.debugCheckInvalidValueType=null;
   await Firebase.initializeApp();

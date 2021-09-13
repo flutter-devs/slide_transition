@@ -18,7 +18,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(ColorConstants.saphire_blue),
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Expanded(
@@ -76,7 +76,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
               child: Icon(
                 Icons.arrow_back_ios,
                 size: 16,
-                color: Color(ColorConstants.pure_white),
+                color: Color(ColorConstants.black1),
               ),
             ),
           ),
@@ -85,7 +85,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
               child: Text(
                 widget.movieDataModel.title!,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 18
                 ),
                 maxLines: 1,
@@ -96,7 +96,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
           Icon(
             Icons.turned_in_not_sharp,
             size: 18,
-            color: Color(ColorConstants.pure_white),
+            color: Color(ColorConstants.black1),
           ),
         ],
       ),
@@ -142,14 +142,11 @@ class _MovieDetailViewState extends State<MovieDetailView> {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(24),
-              child: Hero(
-                tag: '${widget.movieDataModel.id}',
-                child: Image.network(
-                  Constants.IMAGE_BASE_URL +
-                      Constants.IMAGE_SIZE_1 +
-                      widget.movieDataModel.posterPath!,
-                  fit: BoxFit.cover,
-                ),
+              child: Image.network(
+                Constants.IMAGE_BASE_URL +
+                    Constants.IMAGE_SIZE_1 +
+                    widget.movieDataModel.posterPath!,
+                fit: BoxFit.cover,
               ),
             ),
           ),
@@ -163,7 +160,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
       alignment: Alignment.topLeft,
       child: Text(
         widget.movieDataModel.title!,
-        style: TextStyle(color: Color(ColorConstants.pure_white), fontSize: 16),
+        style: TextStyle(color: Colors.black, fontSize: 16),
       ),
     );
   }
@@ -175,22 +172,22 @@ class _MovieDetailViewState extends State<MovieDetailView> {
           Text(
             StringConstants.release,
             style:
-                TextStyle(color: Color(ColorConstants.white60), fontSize: 15),
+                TextStyle(color: Colors.black, fontSize: 15),
           ),
           Text(
             ' ${widget.movieDataModel.releaseDate!}',
             style:
-                TextStyle(color: Color(ColorConstants.white60), fontSize: 15),
+                TextStyle(color: Colors.black, fontSize: 15),
           ),
           Container(
               height: 15,
               child: VerticalDivider(
-                color: Color(ColorConstants.pure_white),
+                color: Colors.black,
               )),
           Text(
             '${widget.movieDataModel.voteAverage ?? 0}',
             style:
-                TextStyle(color: Color(ColorConstants.white60), fontSize: 15),
+                TextStyle(color: Colors.black, fontSize: 15),
           ),
           Icon(
             Icons.star,
@@ -206,16 +203,23 @@ class _MovieDetailViewState extends State<MovieDetailView> {
     return Row(
       children: [
         Container(
-          height: 30,
-          width: 60,
+          height: 35,
+          width: 70,
           decoration: BoxDecoration(
-              color: Color(0xff151a37),
+              color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Center(
-            child: Text(
-              "Crime",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white60, fontSize: 10),
+
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+                side: BorderSide(width: 1, color: Colors.green)
+            ),
+            child: Center(
+              child: Text(
+                "Crime",
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.black, fontSize: 10),
+              ),
             ),
           ),
         ),
@@ -223,15 +227,21 @@ class _MovieDetailViewState extends State<MovieDetailView> {
           width: 10,
         ),
         Container(
-          height: 30,
-          width: 60,
+          height: 35,
+          width: 70,
           decoration: BoxDecoration(
-              color: Color(0xff151a37),
+              color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Center(
-            child: Text(
-              "Horror",
-              style: TextStyle(color: Colors.white60, fontSize: 10),
+          child: Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+                side: BorderSide(width: 1, color: Colors.green)
+            ),
+            child: Center(
+              child: Text(
+                "Horror",
+                style: TextStyle(color: Colors.black, fontSize: 10),
+              ),
             ),
           ),
         ),
@@ -239,15 +249,21 @@ class _MovieDetailViewState extends State<MovieDetailView> {
           width: 10,
         ),
         Container(
-          height: 30,
-          width: 60,
+          height: 35,
+          width: 70,
           decoration: BoxDecoration(
-              color: Color(0xff151a37),
+              color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Center(
-            child: Text(
-              "Drama",
-              style: TextStyle(color: Colors.white60, fontSize: 10),
+          child: Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+                side: BorderSide(width: 1, color: Colors.green)
+            ),
+            child: Center(
+              child: Text(
+                "Drama",
+                style: TextStyle(color: Colors.black, fontSize: 10),
+              ),
             ),
           ),
         ),
@@ -255,15 +271,21 @@ class _MovieDetailViewState extends State<MovieDetailView> {
           width: 10,
         ),
         Container(
-          height: 30,
-          width: 60,
+          height: 35,
+          width: 70,
           decoration: BoxDecoration(
-              color: Color(0xff151a37),
+              color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Center(
-            child: Text(
-              "Comedy",
-              style: TextStyle(color: Colors.white60, fontSize: 10),
+          child: Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+                side: BorderSide(width: 1, color: Colors.green)
+            ),
+            child: Center(
+              child: Text(
+                "Comedy",
+                style: TextStyle(color: Colors.black, fontSize: 10),
+              ),
             ),
           ),
         ),
@@ -280,7 +302,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
             alignment: Alignment.topLeft,
             child: Text(
               "Overview",
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
           SizedBox(
@@ -290,7 +312,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
             widget.movieDataModel.overview!,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.white60,
+              color: Colors.black,
             ),
           ),
         ],
@@ -300,7 +322,6 @@ class _MovieDetailViewState extends State<MovieDetailView> {
 
   Widget _buildBuyTicketButton() {
     return Container(
-      color: Color(0xff070d2d),
       padding: EdgeInsets.only(top: 16, bottom: 16),
       child: Align(
         alignment: Alignment.bottomCenter,
