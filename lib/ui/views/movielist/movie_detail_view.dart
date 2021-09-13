@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/core/constants/color_constants.dart';
-import 'package:movie_app/core/constants/constants.dart';
-import 'package:movie_app/core/constants/string_constants.dart';
-import 'package:movie_app/core/models/movie_items.dart';
+import 'package:slide_transition_app/core/constants/color_constants.dart';
+import 'package:slide_transition_app/core/constants/constants.dart';
+import 'package:slide_transition_app/core/constants/string_constants.dart';
+import 'package:slide_transition_app/core/models/movie_items.dart';
+import 'package:slide_transition_app/core/constants/color_constants.dart';
 
 class MovieDetailView extends StatefulWidget {
   final Results movieDataModel;

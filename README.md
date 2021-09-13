@@ -1,4 +1,4 @@
-# movie_app
+# slide_transition
 
 A new Flutter project.
 

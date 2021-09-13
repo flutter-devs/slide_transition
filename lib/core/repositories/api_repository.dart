@@ -1,8 +1,8 @@
 
 import 'package:dio/dio.dart';
-import 'package:movie_app/core/constants/constants.dart';
-import 'package:movie_app/core/models/movie_items.dart';
-import 'package:movie_app/core/services/api_service.dart';
+import 'package:slide_transition_app/core/constants/constants.dart';
+import 'package:slide_transition_app/core/models/movie_items.dart';
+import 'package:slide_transition_app/core/services/api_service.dart';
 
 
 class APIRepository {

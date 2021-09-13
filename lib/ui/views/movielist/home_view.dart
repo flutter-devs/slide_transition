@@ -3,11 +3,11 @@ import 'package:custom_radio_grouped_button/CustomButtons/CustomRadioButton.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/rating/gf_rating.dart';
-import 'package:movie_app/core/constants/color_constants.dart';
-import 'package:movie_app/core/constants/constants.dart';
-import 'package:movie_app/core/models/movie_items.dart';
-import 'package:movie_app/core/viewmodels/views/login/home_viewmodel.dart';
-import 'package:movie_app/ui/views/movielist/movie_detail_view.dart';
+import 'package:slide_transition_app/core/constants/color_constants.dart';
+import 'package:slide_transition_app/core/constants/constants.dart';
+import 'package:slide_transition_app/core/models/movie_items.dart';
+import 'package:slide_transition_app/core/viewmodels/views/login/home_viewmodel.dart';
+import 'package:slide_transition_app/ui/views/movielist/movie_detail_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -56,20 +56,7 @@ class _HomeViewState extends State<HomeView>with SingleTickerProviderStateMixin 
       body: Column(
         children: [
           _buildSlideTransition(),
-          Expanded(
-            child: SingleChildScrollView(
-              child: Container(
-                child: Column(
-                  children: [
-
-                    _buildPopularSection(),
-                    SizedBox(height: 20),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
+          Expanded(child: _buildPopularSection()),
         ],
       ),
     );
@@ -77,8 +64,7 @@ class _HomeViewState extends State<HomeView>with SingleTickerProviderStateMixin 
 
   Widget _buildPopularSection() {
     return Container(
-      //height: 300,
-      padding: EdgeInsets.only(left: 20, top: 5),
+      padding: EdgeInsets.only(left: 20, top: 16),
       width: MediaQuery.of(context).size.width,
       child: model != null && model!.isPopularLoading
           ? Center(child: CircularProgressIndicator())
@@ -89,7 +75,6 @@ class _HomeViewState extends State<HomeView>with SingleTickerProviderStateMixin 
                   child: ListView.builder(
                     shrinkWrap: true,
                     physics: ClampingScrollPhysics(),
-
                     itemCount: model != null && model!.popularMovies != null
                         ? model!.popularMovies!.results!.length
                         : 0,
